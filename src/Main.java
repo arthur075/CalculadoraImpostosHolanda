@@ -42,7 +42,7 @@ public class Main {
                 resultado = calculaAnual(valorAnual);
                 System.out.println("O seu salário de: "+ valorAnual +" por ano, com os impostos ficara de: "+ resultado+" por ano");
             default:
-                System.out.println("Resposta inválida!");
+                System.out.println("Resposta inválida! insira outra resposta");
 
         }
 
