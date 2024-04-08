@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,10 +10,7 @@ public class Main {
 
         double valorAnual, valorMensal, valorDiario, valorSemanal;
         int escolhaUsu;
-        double impostoMin;
         double resultado;
-        double impostoMax;
-
         System.out.println("Insira de que forma você deseja informar o seu salário: ");
         System.out.println("Diario(1) Semanal(2) Mensal(3) Anual(4)");
         Scanner input = new Scanner(System.in);
@@ -30,13 +28,28 @@ public class Main {
                 System.out.println("Digite o seu salário semanal: ");
                 valorSemanal = input.nextDouble();
                 resultado = calculaSemanal(valorSemanal);
-                System.out.println("O seu salario de:");
+                System.out.println("O seu salário de: " + valorSemanal + " por semana, com os impostos ficara de: " + resultado + " por ano");
+                break;
+            case 3:
+                System.out.println("Digite o seu salário mensal: ");
+                valorMensal = input.nextDouble();
+                resultado = calculaSemanal(valorMensal);
+                System.out.println("O seu salário de: " + valorMensal + " por mês, com os impostos ficara de: " + resultado + " por ano");
+                break;
+            case 4:
+                System.out.println("Digite o seu salário anual: ");
+                valorAnual = input.nextDouble();
+                resultado = calculaAnual(valorAnual);
+                System.out.println("O seu salário de: "+ valorAnual +" por ano, com os impostos ficara de: "+ resultado+" por ano");
+            default:
+                System.out.println("Resposta inválida!");
 
         }
 
 
     }
-    public static double calculaDiario (double valorDiario) {
+
+    public static double calculaDiario(double valorDiario) {
         /*necessidade: multiplicar por 30, 12 taxa */
         double resultado;
         resultado = ((valorDiario * 30) * 12);
@@ -50,7 +63,7 @@ public class Main {
         return resultado;
     }
 
-    public static double calculaSemanal (double valorSemanal) {
+    public static double calculaSemanal(double valorSemanal) {
 
         double resultado;
         resultado = ((valorSemanal * 4) * 12);
@@ -65,4 +78,31 @@ public class Main {
 
     }
 
+    public static double calculaMensal(double valorMensal) {
+
+        double resultado;
+        resultado = (valorMensal * 12);
+        if (resultado <= 75518) {
+            resultado = (resultado * 36.97) / 100;
+        } else if (resultado > 75518) {
+            resultado = (resultado * 49.50) / 100;
+        }
+
+        return resultado;
+
+    }
+
+    public static double calculaAnual(double valorAnual) {
+
+        double resultado;
+        resultado = valorAnual;
+        if (resultado <= 75518) {
+            resultado = (resultado * 36.97) / 100;
+        } else if (resultado > 75518) {
+            resultado = (resultado * 49.50) / 100;
+        }
+
+        return resultado;
+
+    }
 }
