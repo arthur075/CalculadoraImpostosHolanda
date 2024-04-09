@@ -22,25 +22,25 @@ public class Main {
                 System.out.println("Digite o seu salário diário: ");
                 valorDiario = input.nextDouble();
                 resultado = calculaDiario(valorDiario);
-                System.out.println("O seu salário de: " + valorDiario + " por dia, com os impostos ficara de: " + resultado + " por ano");
+                System.out.println("O seu salário de: " + valorDiario + " por dia, com os impostos ficara de: " + resultado + " por ano.");
                 break;
             case 2:
                 System.out.println("Digite o seu salário semanal: ");
                 valorSemanal = input.nextDouble();
                 resultado = calculaSemanal(valorSemanal);
-                System.out.println("O seu salário de: " + valorSemanal + " por semana, com os impostos ficara de: " + resultado + " por ano");
+                System.out.println("O seu salário de: " + valorSemanal + " por semana, com os impostos ficara de: " + resultado + " por ano.");
                 break;
             case 3:
                 System.out.println("Digite o seu salário mensal: ");
                 valorMensal = input.nextDouble();
                 resultado = calculaMensal(valorMensal);
-                System.out.println("O seu salário de: " + valorMensal + " por mês, com os impostos ficara de: " + resultado + " por ano");
+                System.out.println("O seu salário de: " + valorMensal + " por mês, com os impostos ficara de: " + resultado + " por ano.");
                 break;
             case 4:
                 System.out.println("Digite o seu salário anual: ");
                 valorAnual = input.nextDouble();
                 resultado = calculaAnual(valorAnual);
-                System.out.println("O seu salário de: "+ valorAnual +" por ano, com os impostos ficara de: "+ resultado+" por ano");
+                System.out.println("O seu salário de: "+ valorAnual +" por ano, com os impostos ficara de: "+ resultado+" por ano.");
             default:
                 System.out.println("Resposta inválida! insira outra resposta...");
 
