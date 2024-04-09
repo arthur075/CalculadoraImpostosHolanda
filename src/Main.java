@@ -33,7 +33,7 @@ public class Main {
             case 3:
                 System.out.println("Digite o seu salário mensal: ");
                 valorMensal = input.nextDouble();
-                resultado = calculaSemanal(valorMensal);
+                resultado = calculaMensal(valorMensal);
                 System.out.println("O seu salário de: " + valorMensal + " por mês, com os impostos ficara de: " + resultado + " por ano");
                 break;
             case 4:
@@ -89,7 +89,6 @@ public class Main {
         }
 
         return resultado;
-
     }
 
     public static double calculaAnual(double valorAnual) {
